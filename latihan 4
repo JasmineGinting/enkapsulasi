@@ -1,0 +1,73 @@
+package enkapsulasi;
+
+public class Latihan_4 {
+    
+    private double penumpang;
+    private double max_penumpang;
+    
+    public Latihan_4 (int maxpenumpang) {
+        this.max_penumpang = maxpenumpang;
+        penumpang = 12;
+    }
+    //method mutator atau set
+    public void setPenumpang(int penumpang) {
+        this.penumpang = penumpang;
+        penumpang = 54;
+        
+        if (penumpang > max_penumpang) {
+            System.out.println("busnya nguling");
+        } else {
+            this.penumpang = penumpang;
+        }
+    }
+    //mehod accsessor atau get
+    public void getPenumpang(int pass) {
+        if (pass == 1412) {
+            System.out.println("silakan masuk");
+        } else {
+            System.out.println("silakan coba lagi");
+            System.exit(0);
+        } 
+    }
+   
+    //cetak penumpang
+    public void cetakPenumpang() {
+        
+        System.out.println("jumlah penumpang : " + penumpang);
+        System.out.println("penumpang maksimal : " + max_penumpang);
+    }
+}
+
+====== UJI LATIHAN 4 ======
+
+package enkapsulasi;
+
+import java.util.Scanner;
+
+public class Uji_Lat4 {
+   
+    public static void jalanBus() {
+                
+        //membuat objek
+        Latihan_4 tayo = new Latihan_4(0);
+        
+        Scanner tik = new Scanner(System.in);
+        System.out.println("masukkan password : ");
+        int pass = tik.nextInt();
+        
+        tayo.getPenumpang(pass);
+        
+        //penumpang awal
+        tayo.cetakPenumpang();
+        
+        //nambah penumpang
+        System.out.println("jumlah penumpang yang naik : " );
+        int a = tik.nextInt();
+        tayo.setPenumpang(a);
+        tayo.cetakPenumpang();
+    }
+    
+    public static void main(String[] args) {
+        jalanBus();
+    }
+}
