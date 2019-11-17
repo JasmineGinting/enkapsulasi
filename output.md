@@ -27,3 +27,13 @@ nama : ame
 kelas : 10
 absen : 22
 NIS : 21187
+
+LATIHAN 4
+
+masukkan password : 1412
+silakan masuk
+jumlah penumpang : 12
+penumpang maksimal : 20
+jumlah penumpang yang naik : 2
+jumlah penumpang : 14
+penumpang maksimal : 20
