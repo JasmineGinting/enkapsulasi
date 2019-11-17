@@ -39,6 +39,7 @@ jumlah penumpang : 14
 penumpang maksimal : 20
 
 PRAKTIKUM 1
+
 masukkan password : 1412
 password benar
 penumpang : 24
