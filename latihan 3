@@ -1,0 +1,63 @@
+package enkapsulasi;
+
+public class Latihan_3 {
+    private String nama;
+    private String kelas;
+    private String absen;
+    private String nis;
+    
+    //metod accessor
+    public String accNama() {
+        return nama;
+    }
+    
+    public String accKelas() {
+        return kelas;
+    }
+    
+    public String accAbsen() {
+        return absen;
+    }
+    
+    public String accNis() {
+        return nis;
+    }
+    
+    //method mutator
+    public void mutNama(String nama) {
+        this.nama = nama;
+    }
+    
+    public void mutKelas(String kelas) {
+        this.kelas = kelas;
+    }
+    
+    public void mutAbseen(String absen) {
+        this.absen = absen;
+    }
+    
+    public void mutNis(String nis) {
+        this.nis = nis;
+    }
+}
+
+====== UJI LATIHAN 3 ====== 
+
+package enkapsulasi;
+
+public class Uji_Lat3 {
+
+    public static void main(String[] args) {
+        Latihan_3 obj = new Latihan_3();
+        
+        obj.mutAbseen("22");
+        obj.mutKelas("10");
+        obj.mutNama("ame");
+        obj.mutNis("21187");
+        
+        System.out.println("nama : " + obj.accNama() +"\nkelas : " + obj.accKelas() +
+                "\nabsen : " + obj.accAbsen() + "\nNIS : " + obj.accNis());
+        
+    }
+    
+}
