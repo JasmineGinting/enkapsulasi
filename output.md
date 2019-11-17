@@ -23,3 +23,7 @@ kuota penuh
 
 LATIHAN 3
 
+nama : ame
+kelas : 10
+absen : 22
+NIS : 21187
