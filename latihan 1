@@ -1,0 +1,36 @@
+package enkapsulasi;
+
+public class Latihan_1 {
+   int penumpang;
+   int maxPenumpang;
+   
+   public void print() {
+       System.out.println("jumlah penumpang " + penumpang);
+       System.out.println("jumlah penumpang maksimal " + maxPenumpang);
+   }
+}
+
+====== UJI LATIHAN 1 ======
+
+package enkapsulasi;
+
+public class Uji_Lat1 {
+
+    public static void main(String[] args) {
+        Latihan_1 tayo = new Latihan_1();
+        
+        tayo.penumpang = 10;
+        tayo.maxPenumpang = 18;
+        tayo.print();
+        
+        tayo.penumpang = tayo.penumpang + 5;
+        tayo.print();
+        
+        tayo.penumpang = tayo.penumpang - 3;
+        tayo.print();
+        
+        tayo.penumpang = tayo.penumpang + 7;
+        tayo.print();
+    }
+    
+}
