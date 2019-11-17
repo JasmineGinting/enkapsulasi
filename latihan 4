@@ -2,8 +2,8 @@ package enkapsulasi;
 
 public class Latihan_4 {
     
-    private double penumpang;
-    private double max_penumpang;
+    private int penumpang;
+    private int max_penumpang;
     
     public Latihan_4 (int maxpenumpang) {
         this.max_penumpang = maxpenumpang;
@@ -11,13 +11,12 @@ public class Latihan_4 {
     }
     //method mutator atau set
     public void setPenumpang(int penumpang) {
-        this.penumpang = penumpang;
-        penumpang = 54;
+        int temp = this.penumpang + penumpang;
         
-        if (penumpang > max_penumpang) {
+        if (temp > max_penumpang) {
             System.out.println("busnya nguling");
         } else {
-            this.penumpang = penumpang;
+            this.penumpang = temp;
         }
     }
     //mehod accsessor atau get
@@ -49,7 +48,7 @@ public class Uji_Lat4 {
     public static void jalanBus() {
                 
         //membuat objek
-        Latihan_4 tayo = new Latihan_4(0);
+        Latihan_4 tayo = new Latihan_4(20);
         
         Scanner tik = new Scanner(System.in);
         System.out.println("masukkan password : ");
