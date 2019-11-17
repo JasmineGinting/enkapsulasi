@@ -1,0 +1,50 @@
+package enkapsulasi;
+
+public class Latihan_2 {
+    int penumpang;
+    int maxPenumpang;
+    
+    Latihan_2(int maxPenumpang) {
+        this.maxPenumpang = maxPenumpang;
+        penumpang = 0;
+    }
+    
+    public void addPenumpang(int penumpang) {
+        int smtr = this.penumpang + penumpang;
+        System.out.println("penumpang ditambah " + penumpang);
+        if (smtr >= maxPenumpang) {
+            System.out.println("kuota penuh");
+            System.exit(0);
+        } else {
+            this.penumpang = smtr;
+        }
+    } 
+    
+    public void print() {
+        System.out.println("jumlah penumpang : " + this.penumpang);
+        System.out.println("jumlah penumpang maksimal : " + this.maxPenumpang);
+    }
+}
+
+====== UJI LATIHAN 2 ======
+
+package enkapsulasi;
+
+public class Uji_Lat2 {
+
+    public static void main(String[] args) {
+        Latihan_2 obj = new Latihan_2(20);
+        
+        obj.addPenumpang(12);
+        obj.print();
+        
+        obj.addPenumpang(2);
+        obj.print();
+        
+        obj.addPenumpang(8);
+        obj.print();
+        
+        obj.addPenumpang(1);
+    }
+    
+}
