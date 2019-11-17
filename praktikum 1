@@ -1,0 +1,85 @@
+package enkapsulasi;
+
+public class Prak_1 {
+
+    int penumpang;
+    int maxpenumpang;
+    double ratarata;
+    double berat;
+
+    public Prak_1(int maxpenumpang) {
+        this.maxpenumpang = maxpenumpang;
+        maxpenumpang = 0;
+    }
+
+    public void addPenumpang(int penumpang) {
+        int x;
+        x = this.penumpang + penumpang;
+        if (x > maxpenumpang) {
+            System.out.println("penumpang melebihi kuota");
+            System.exit(0);
+        } else {
+            this.penumpang = x;
+        }
+    }
+
+    public void getPenumpang(int password) {
+        if (password == 1412) {
+            System.out.println("password benar");
+        } else {
+            System.out.println("password salah");
+            System.exit(0);
+        }
+    }
+
+    public void addBerat(double berat) {
+        double y;
+        y = this.berat + berat;
+        this.berat = y;
+    }
+
+    public void getAverage() {
+        this.ratarata = this.berat / this.penumpang;
+    }
+
+    public void catak() {
+        System.out.println("penumpang : " + this.penumpang);
+        System.out.println("rata rata berat : " + this.ratarata);
+    }
+}
+
+====== UJI PRAKTIKUM 1 ======
+
+package enkapsulasi;
+
+import java.util.Scanner;
+
+public class Uji_Prak1 {
+
+    public static void jalanBus2() {
+        Prak_1 tayo = new Prak_1(24);
+        Scanner tik = new Scanner(System.in);
+        
+        System.out.print("masukkan password : " );
+        int x = tik.nextInt();
+        tayo.getPenumpang(x);
+        
+        tayo.addPenumpang(10);
+        tayo.addBerat(420.0);
+        tayo.getAverage();
+
+        tayo.addPenumpang(12);
+        tayo.addBerat(530.0);
+        tayo.getAverage();
+
+        tayo.addPenumpang(2);
+        tayo.addBerat(600.0);
+        tayo.getAverage();
+        tayo.catak(); 
+        
+    }
+
+    public static void main(String[] args) {
+        jalanBus2();
+    }
+}
