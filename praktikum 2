@@ -1,0 +1,59 @@
+package enkapsulasi;
+
+import static java.lang.Math.PI;
+
+public class Prak_2 {
+   double jari_jari;
+   
+   public void setJari(double jari_jari) {
+       this.jari_jari = jari_jari;
+   }
+   
+   public void showDiameter() {
+       double diameter = this.jari_jari + this.jari_jari;
+       System.out.println("Diameter : " + diameter);
+   }
+   
+   public void showLuasPermukaan() {
+       double luas = 4 * Math.PI * this.jari_jari * this.jari_jari; 
+       System.out.println("Luas permukaan : " + luas);
+   }
+   
+   public void showVolume() {
+       double volume = 4/3 * Math.PI * this.jari_jari * this.jari_jari * this.jari_jari;
+       System.out.println("Volume : " + volume);
+   }
+   
+   public void cetak() {
+       System.out.println("Jari-jari : " + this.jari_jari);
+   }
+}
+
+====== UJI PRAKTIKUM 2 ======
+
+package enkapsulasi;
+
+import java.util.Scanner;
+
+public class Uji_Prak2 {
+    
+    public static void jalanBola() {
+        Scanner tik = new Scanner(System.in);
+        
+        System.out.print("Input jari-jari bola dalam desimal : " );
+        double x = tik.nextDouble();
+
+        Prak_2 tenis = new Prak_2();
+
+        tenis.setJari(x);
+        tenis.cetak();
+        tenis.showDiameter();
+        tenis.showLuasPermukaan();
+        tenis.showVolume();
+        
+    }
+    
+    public static void main(String[] args) {
+        jalanBola();
+    }
+}
